@@ -4,3 +4,13 @@
 
 layout: home
 ---
+
+{% for fitxa in site.fitxes %}
+
+  <h2>
+    <a href="{{ fitxa.url }}">
+      {{ fitxa.title }}
+    </a>
+  </h2>
+  
+{% endfor %}
