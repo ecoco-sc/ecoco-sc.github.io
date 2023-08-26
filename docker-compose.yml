@@ -2,8 +2,10 @@ version: '2'
 
 services:
   jekyll:
-    image: jekyll/jekyll:3.8
+    image: jekyll/jekyll:latest
     command: jekyll serve --watch --force-polling --verbose --trace
+    environment:
+      - JEKYLL_ENV=development jekyll build
     ports:
       - 4000:4000
     volumes:
